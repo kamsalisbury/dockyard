@@ -1,0 +1,10 @@
+FROM alpine:latest
+MAINTAINER 29674098+kamsalisbury@users.noreply.github.com
+LABEL "author"="Kam Salisbury"
+LABEL "Date"="2024-04-18"
+#EXPOSE 8000/tcp
+RUN apk update
+RUN apk add thttpd
+CMD /bin/sh
+# Reference: https://www.acme.com/software/thttpd/thttpd_man.html
+# thttpd -p 8000 -r -dd /var/www/http 
